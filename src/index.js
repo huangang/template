@@ -2,6 +2,8 @@ const vm = require('vm');
 const sucrase = require('sucrase');
 const dayjs = require('dayjs');
 const numeral = require('numeral');
+const i18next = require('i18next');
+
 // TODO: remove react dep.
 const { createElement, Fragment } = require('react');
 // TODO: custom renderer.
@@ -18,6 +20,7 @@ function exec(template, style, data, printer) {
   const sandbox = Object.create(null);
   sandbox.dayjs = dayjs;
   sandbox.numeral = numeral;
+  sandbox.i18next = i18next;
   sandbox.React = { createElement, Fragment };
   sandbox.data = data;
   sandbox.style = style;
