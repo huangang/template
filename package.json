@@ -1,5 +1,5 @@
 {
-  "name": "@posprint/template",
+  "name": "@huangang/posprint-template",
   "version": "0.0.5",
   "description": "Templating language for POS print.",
   "main": "src/index.js",
